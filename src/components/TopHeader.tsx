@@ -1,6 +1,7 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { Phone, Mail } from "lucide-react";
 
 const TopHeader = () => {
 
@@ -12,10 +13,10 @@ const TopHeader = () => {
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center space-x-4">
             <span>
-              <i className="fas fa-phone-alt"></i> (225) 555-0118
+              <Phone /> (225) 555-0118
             </span>
             <span>
-              <i className="fas fa-envelope"></i> michelle.rivera@example.com
+              <Mail /> michelle.rivera@example.com
             </span>
           </div>
           <div className="flex items-center space-x-4">

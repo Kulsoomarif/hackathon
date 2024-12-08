@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Image from "next/image";
 
 const page = () => {
   return (
     <div>
-      
+      {/* Contact Section */}
       <section className="px-6 md:px-12 lg:px-24 py-12 text-center">
         <h2 className="text-3xl font-bold text-gray-800">Get in touch today!</h2>
         <p className="text-gray-600 mt-4 max-w-xl mx-auto">
@@ -13,22 +14,40 @@ const page = () => {
           <p>Phone : +451 215 215</p>
           <p>Fax : +451 215 215</p>
         </div>
-        <div className="flex justify-center space-x-4 mt-4">
-          <a href="#" className="text-gray-600 hover:text-blue-600">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#" className="text-gray-600 hover:text-blue-600">
-            <i className="fab fa-facebook"></i>
-          </a>
-          <a href="#" className="text-gray-600 hover:text-blue-600">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="#" className="text-gray-600 hover:text-blue-600">
-            <i className="fab fa-linkedin"></i>
-          </a>
+        {/* Image beside text */}
+        <div className="flex flex-col md:flex-row justify-center items-center mt-8 space-x-8">
+          <div className="text-left md:w-1/2">
+            <p className="text-gray-600">
+              Reach out to us on social media or through the provided phone and fax numbers!
+            </p>
+            <div className="flex justify-start space-x-4 mt-4">
+              <a href="#" className="text-gray-600 hover:text-blue-600">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="#" className="text-gray-600 hover:text-blue-600">
+                <i className="fab fa-facebook"></i>
+              </a>
+              <a href="#" className="text-gray-600 hover:text-blue-600">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="#" className="text-gray-600 hover:text-blue-600">
+                <i className="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div className="md:w-1/2 mt-6 md:mt-0">
+            <Image 
+              src="/shop1.png" 
+              alt="shopping"
+              width={400}
+              height={400}
+              className="rounded-lg"
+            />
+          </div>
         </div>
       </section>
 
+      {/* Business Ideas Section */}
       <section className="bg-gray-100 py-16">
         <div className="text-center">
           <h3 className="text-2xl font-bold text-gray-800">We help small businesses with big ideas</h3>
@@ -72,7 +91,7 @@ const page = () => {
         </div>
       </section>
 
-      
+      {/* Let's Talk Section */}
       <section className="text-center py-16">
         <h3 className="text-xl text-gray-600 mb-4">We cannot wait to meet you</h3>
         <h2 className="text-3xl font-bold text-gray-800">Lets Talk</h2>
@@ -86,7 +105,7 @@ const page = () => {
         &copy; {new Date().getFullYear()} Bandage. All rights reserved.
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

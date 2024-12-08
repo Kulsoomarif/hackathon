@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Heart, Search, ShoppingCart } from "lucide-react";
 
 const Header = () => {
   const [isShopOpen, setIsShopOpen] = useState(false);
@@ -63,13 +64,13 @@ const Header = () => {
             Login / Register
           </Link>
           <button aria-label="Search" className="hover:text-blue-600">
-            <i className="fas fa-search"></i>
+            <Search />
           </button>
           <button aria-label="Wishlist" className="hover:text-blue-600">
-            <i className="fas fa-heart"></i>
+            <Heart />
           </button>
           <button aria-label="Cart" className="hover:text-blue-600">
-            <i className="fas fa-shopping-cart"></i>
+            <ShoppingCart/>
           </button>
         </div>
 
